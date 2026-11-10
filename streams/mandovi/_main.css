@@ -642,3 +642,13 @@ html #crm-main-content-wrapper:has(.crm-contact-page) {
 #contact-summary .address.add-new .crm-edit-help {
   background: transparent;
 }
+
+html .crm-container.ui-dialog .ui-dialog-buttonset button:has(.fa-times) {
+  background: var(--crm-secondary-color);
+  color: var(--crm-secondary-text-color);
+}
+
+html .crm-container.ui-dialog .ui-dialog-buttonset button:has(.fa-times):is(:hover, :focus) {
+  background: var(--crm-secondary-hover-color);
+  color: var(--crm-secondary-hover-text-color);
+}
