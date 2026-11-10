@@ -1,0 +1,518 @@
+:root {
+  --crm-c-teal-50: #f0f7f5;
+  --crm-c-teal-100: #e3f1ee;
+  --crm-c-teal-200: #cfe7e2;
+  --crm-c-teal-600: #115e59;
+  --crm-c-teal-700: #0d4a46;
+  --crm-c-teal-900: #0a3a37;
+  --crm-c-teal: var(--crm-c-teal-200);
+  --crm-c-teal-dark: var(--crm-c-teal-600);
+  --crm-c-blue: var(--crm-c-teal-200);
+  --crm-c-blue-light: var(--crm-c-teal-100);
+  --crm-c-blue-mid: var(--crm-c-teal-600);
+  --crm-c-blue-dark: var(--crm-c-teal-700);
+  --crm-c-blue-darker: var(--crm-c-teal-900);
+  --crm-c-gray-900: #1f2933;
+  --crm-c-gray-800: #3a4552;
+  --crm-c-gray-700: #5b6775;
+  --crm-c-gray-600: #6b7785;
+  --crm-c-gray-500: #85909c;
+  --crm-c-gray-400: #a5aeb8;
+  --crm-c-gray-300: #c6cdd4;
+  --crm-c-gray-200: #e2e6ea;
+  --crm-c-gray-100: #ebeef1;
+  --crm-c-gray-050: #f4f6f8;
+  --crm-c-gray-025: #f8f9fa;
+  --crm-c-green: #e7f6ec;
+  --crm-c-green-light: #e7f6ec;
+  --crm-c-green-dark: #15803d;
+  --crm-c-red: #fdeaea;
+  --crm-c-red-light: #fdeaea;
+  --crm-c-red-dark: #b91c1c;
+  --crm-c-amber: #b45309;
+  --crm-c-amber-light: #fdf3dc;
+  --crm-c-yellow: #fbbf24;
+  --crm-c-yellow-light: #fdf3dc;
+  --crm-c-darkest: var(--crm-c-gray-900);
+
+  --crm-text-dark-color: var(--crm-c-gray-900);
+  --crm-link-color: var(--crm-c-teal-600);
+  --crm-link-hover-color: var(--crm-c-teal-700);
+  --crm-focus-color: var(--crm-c-teal-600);
+  --crm-page-bg-color: var(--crm-c-gray-050);
+  --crm-container-bg-color: var(--crm-paper);
+  --crm-layer1-bg-color: var(--crm-c-gray-025);
+  --crm-layer2-bg-color: var(--crm-c-gray-050);
+  --crm-inverse-bg-color: var(--crm-c-gray-800);
+  --crm-drag-bg-color: var(--crm-c-gray-100);
+  --crm-code-bg-color: var(--crm-c-gray-050);
+  --crm-border-color: var(--crm-c-gray-200);
+
+  --crm-primary-color: var(--crm-c-teal-600);
+  --crm-primary-hover-color: var(--crm-c-teal-700);
+  --crm-primary-ink-color: var(--crm-c-teal-700);
+  --crm-secondary-color: var(--crm-c-gray-100);
+  --crm-secondary-hover-color: var(--crm-c-gray-200);
+  --crm-secondary-text-color: var(--crm-c-gray-800);
+  --crm-secondary-hover-text-color: var(--crm-c-gray-900);
+  --crm-secondary-ink-color: var(--crm-c-gray-800);
+  --crm-success-color: #15803d;
+  --crm-success-light-color: #e7f6ec;
+  --crm-success-ink-color: #14532d;
+  --crm-warning-color: #b45309;
+  --crm-warning-light-color: #fdf3dc;
+  --crm-warning-ink-color: #713f12;
+  --crm-danger-color: #b91c1c;
+  --crm-danger-light-color: #fdeaea;
+  --crm-danger-ink-color: #7f1d1d;
+  --crm-info-color: #1d4ed8;
+  --crm-info-light-color: #f0f4fc;
+  --crm-info-ink-color: #27407a;
+
+  --crm-r-1: 4px;
+  --crm-r-2: 6px;
+  --crm-r-3: 8px;
+  --crm-r-5: 12px;
+  --crm-l-radius: var(--crm-r-2);
+  --crm-shadow-block: 0 1px 2px rgb(16 32 30 / 0.05), 0 1px 3px rgb(16 32 30 / 0.08);
+  --crm-shadow-popup: 0 12px 32px rgb(16 32 30 / 0.18), 0 2px 6px rgb(16 32 30 / 0.08);
+  --crm-shadow-bottom: unset;
+  --crm-page-padding: clamp(1rem, 2.5vw, 2rem);
+
+  --crm-font: "IBM Plex Sans", system-ui, sans-serif;
+  --crm-font-size: 0.9375rem;
+  --crm-font-line-height: 1.5;
+  --crm-heading-bg-color: unset;
+  --crm-heading-color: var(--crm-text-color);
+  --crm-heading-padding: var(--crm-l-small-1) 0;
+
+  --crm-btn-radius: var(--crm-r-2);
+  --crm-btn-padding-block: 0.4rem;
+  --crm-btn-padding-inline: 0.85rem;
+  --crm-btn-height: 2rem;
+  --crm-btn-icon-spacing: var(--crm-l-small-3);
+  --crm-btn-margin: var(--crm-l-small) 0;
+  --crm-btn-info-bg-color: var(--crm-secondary-color);
+  --crm-btn-info-text-color: var(--crm-secondary-text-color);
+  --crm-btn-success-bg-color: var(--crm-success-color);
+  --crm-btn-success-text-color: var(--crm-success-text-color);
+  --crm-btn-warning-bg-color: var(--crm-warning-color);
+  --crm-btn-warning-text-color: var(--crm-warning-text-color);
+  --crm-btn-danger-bg-color: var(--crm-danger-light-color);
+  --crm-btn-danger-text-color: var(--crm-danger-ink-color);
+
+  --crm-table-outside-border: var(--crm-border);
+  --crm-table-bg-color: var(--crm-paper);
+  --crm-table-padding: var(--crm-l-medium) var(--crm-l-medium-2);
+  --crm-table-header-bg-color: var(--crm-layer1-bg-color);
+  --crm-table-header-color: var(--crm-c-gray-700);
+  --crm-table-header-border-bottom: var(--crm-border);
+  --crm-table-row-bg-color: var(--crm-paper);
+  --crm-table-row-alternate-mix: 0%;
+  --crm-table-row-hover-color: var(--crm-c-gray-050);
+  --crm-table-sort-color: var(--crm-c-gray-400);
+
+  --crm-panel-head-height: 42px;
+  --crm-panel-bg-color: var(--crm-container-bg-color);
+  --crm-panel-shadow: var(--crm-shadow-block);
+
+  --crm-accordion-radius: var(--crm-r-3);
+  --crm-accordion-border: var(--crm-border);
+  --crm-accordion-border-width: 1px;
+  --crm-accordion-header-bg-color: var(--crm-paper);
+  --crm-accordion-header-bg-active-color: var(--crm-paper);
+  --crm-accordion-header-color: var(--crm-text-color);
+  --crm-accordion-header-border: var(--crm-border);
+  --crm-accordion-header-border-width: 0 0 1px 0;
+  --crm-accordion-header-weight: 600;
+  --crm-accordion-icon-color: var(--crm-c-gray-700);
+  --crm-accordion-body-bg-color: var(--crm-paper);
+  --crm-accordion2-header-bg-color: transparent;
+  --crm-accordion2-header-bg-active-color: var(--crm-layer1-bg-color);
+  --crm-accordion2-body-bg-color: transparent;
+
+  --crm-alert-padding: var(--crm-l-medium-2) var(--crm-l-reg);
+  --crm-alert-border-width: 1px;
+  --crm-alert-success-bg-color: var(--crm-success-light-color);
+  --crm-alert-success-border-color: color-mix(in srgb, var(--crm-success-color) 40%, transparent);
+  --crm-alert-success-text-color: var(--crm-success-ink-color);
+  --crm-alert-warning-bg-color: var(--crm-warning-light-color);
+  --crm-alert-warning-border-color: color-mix(in srgb, var(--crm-warning-color) 40%, transparent);
+  --crm-alert-warning-text-color: var(--crm-warning-ink-color);
+  --crm-alert-info-bg-color: var(--crm-info-light-color);
+  --crm-alert-info-border-color: color-mix(in srgb, var(--crm-info-color) 25%, transparent);
+  --crm-alert-info-text-color: var(--crm-info-ink-color);
+  --crm-alert-danger-bg-color: var(--crm-danger-light-color);
+  --crm-alert-danger-border-color: color-mix(in srgb, var(--crm-danger-color) 40%, transparent);
+  --crm-alert-danger-text-color: var(--crm-danger-ink-color);
+
+  --crm-form-block-bg-color: var(--crm-container-bg-color);
+  --crm-form-block-border-radius: var(--crm-r-3);
+  --crm-form-fieldset-border-color: var(--crm-border-color);
+  --crm-input-bg-color: var(--crm-paper);
+  --crm-input-border-color: var(--crm-c-gray-500);
+  --crm-input-border-radius: var(--crm-r-2);
+  --crm-input-box-shadow: none;
+  --crm-input-label-width: 16ch;
+  --crm-input-label-weight: 500;
+  --crm-input-description: var(--crm-c-gray-700);
+  --crm-input-inline-edit-bg-color: var(--crm-paper);
+  --crm-input-toggle-enabled-bg: var(--crm-primary-color);
+
+  --crm-tabs-bg-color: var(--crm-layer1-bg-color);
+  --crm-tabs-padding: var(--crm-l-small);
+  --crm-tabs-border: var(--crm-border);
+  --crm-tabs-radius: var(--crm-r-3);
+  --crm-tabs-gap: var(--crm-l-small);
+  --crm-tab-bg-color: transparent;
+  --crm-tab-hover-bg-color: var(--crm-c-gray-100);
+  --crm-tab-bg-active: var(--crm-paper);
+  --crm-tab-hang: 0;
+  --crm-tab-padding: var(--crm-l-small-3) var(--crm-l-medium-2);
+  --crm-tab-color: var(--crm-c-gray-700);
+  --crm-tab-radius: var(--crm-r-2);
+  --crm-tab-border: 0 solid transparent;
+  --crm-tab-count-bg-color: var(--crm-secondary-color);
+  --crm-tab-count-color: var(--crm-secondary-text-color);
+
+  --crm-contact-border: var(--crm-border);
+  --crm-contact-radius: var(--crm-r-3);
+  --crm-contact-direction: grid;
+  --crm-contact-side-tabs-width: 220px;
+  --crm-contact-tabs-flow: column;
+  --crm-contact-tabs-gap: var(--crm-l-xsmall);
+  --crm-contact-tabs-padding: var(--crm-l-small);
+  --crm-contact-tabs-radius: var(--crm-contact-radius) 0 0 var(--crm-contact-radius);
+  --crm-contact-panel-radius: 0 var(--crm-contact-radius) var(--crm-contact-radius) 0;
+  --crm-contact-tab-padding: var(--crm-l-medium) var(--crm-l-medium-2);
+  --crm-contact-tab-hang: 0;
+  --crm-contact-tabs-bg-color: var(--crm-layer1-bg-color);
+  --crm-contact-tab-bg-color: transparent;
+  --crm-contact-tab-hover-bg-color: var(--crm-c-gray-100);
+  --crm-contact-tab-border: 0 solid transparent;
+  --crm-contact-tab-count-bg-color: var(--crm-secondary-color);
+  --crm-contact-tab-count-color: var(--crm-secondary-text-color);
+  --crm-contact-tab-radius: var(--crm-r-2);
+  --crm-contact-panel-padding: var(--crm-l-reg-2);
+  --crm-contact-panel-bg-color: var(--crm-container-bg-color);
+  --crm-contact-edit-border: 1px solid var(--crm-primary-color);
+  --crm-contact-block-padding: var(--crm-l-medium-2);
+  --crm-contact-block-bg-color: var(--crm-container-bg-color);
+  --crm-contact-label-bg-color: var(--crm-container-bg-color);
+  --crm-contact-header-bg-color: unset;
+  --crm-contact-header2-bg-color: unset;
+  --crm-contact-header-color: var(--crm-text-color);
+  --crm-contact-header-padding: unset;
+  --crm-contact-image-right: 20px;
+
+  --crm-dialog-bg-color: var(--crm-paper);
+  --crm-dialog-padding: 0;
+  --crm-dialog-radius: var(--crm-r-5);
+  --crm-dialog-header-bg-color: var(--crm-paper);
+  --crm-dialog-header-color: var(--crm-text-color);
+  --crm-dialog-header-border-color: var(--crm-border-color);
+  --crm-dialog-header-radius: var(--crm-r-5) var(--crm-r-5) 0 0;
+
+  --crm-dashlet-box-shadow: var(--crm-shadow-block);
+  --crm-dashlet-header-bg-color: var(--crm-paper);
+  --crm-dashlet-tabs-bg-color: var(--crm-tabs-bg-color);
+  --crm-dashlet-radius: var(--crm-r-3);
+
+  --crm-dropdown-bg-color: var(--crm-paper);
+  --crm-dropdown-color: var(--crm-text-color);
+  --crm-dropdown-hover-text-color: var(--crm-c-gray-900);
+  --crm-dropdown-hover-bg-color: var(--crm-c-gray-100);
+  --crm-dropdown-width: 23ch;
+  --crm-dropdown-radius: var(--crm-r-2);
+  --crm-dropdown2-bg-color: var(--crm-paper);
+  --crm-dropdown2-color: var(--crm-link-color);
+
+  --crm-notify-bg-color: var(--crm-paper);
+  --crm-notify-color: var(--crm-text-color);
+  --crm-notify-accent-border-width: 0 0 0 4px;
+  --crm-notify-radius: var(--crm-r-2);
+  --crm-notify-danger-color: var(--crm-danger-color);
+  --crm-notify-warning-color: var(--crm-warning-color);
+  --crm-notify-success-color: var(--crm-success-color);
+  --crm-notify-info-color: var(--crm-info-color);
+
+  --crm-icon-danger-color: inherit;
+  --crm-icon-success-color: inherit;
+  --crm-icon-warning-color: inherit;
+  --crm-icon-info-color: inherit;
+  --crm-wizard-bg-color: var(--crm-page-bg-color);
+  --crm-filter-bg-color: var(--crm-layer1-bg-color);
+  --crm-filter-item-bg-color: transparent;
+  --crm-filter-item-shadow: none;
+
+  --crm-f-form-width: 700px;
+  --crm-f-fieldset-bg-color: var(--crm-container-bg-color);
+  --crm-f-fieldset-padding: var(--crm-l-reg);
+  --crm-f-label-position: unset;
+  --crm-f-label-align: left;
+  --crm-f-label-width: unset;
+  --crm-f-input-width: 100%;
+  --crm-f-form-focus-outline-color: var(--crm-primary-color);
+  --crm-f-form-error-outline-color: var(--crm-danger-color);
+}
+
+/* crm-menubar.css also sets these on :root and can load after this file */
+html:root {
+  --crm-menubar-color: var(--crm-paper);
+  --crm-menubar-item-color: var(--crm-paper);
+  --crm-menubar-text-color: var(--crm-c-gray-800);
+  --crm-menubar-highlight-color: var(--crm-c-gray-100);
+  --crm-menubar-highlight-text-color: var(--crm-c-gray-900);
+}
+
+#civicrm-menu {
+  border-bottom: var(--crm-border);
+}
+
+#civicrm-menu input#crm-qsearch-input {
+  background-color: var(--crm-input-bg-color);
+  border-color: var(--crm-input-border-color);
+  color: var(--crm-text-color);
+}
+
+html.cms-standalone body {
+  background-color: var(--crm-page-bg-color);
+}
+
+#crm-container {
+  min-height: 100vh;
+  background-color: var(--crm-page-bg-color);
+}
+
+.crm-container table > thead > tr > th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.crm-container table:not(.crm-inline-edit-form) {
+  border-radius: var(--crm-r-3);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.crm-container table tr:first-child th:first-child {
+  border-radius: var(--crm-r-3) 0 0 0;
+}
+
+.crm-container table tr:first-child th:last-child {
+  border-radius: 0 var(--crm-r-3) 0 0;
+}
+
+.crm-container table tr:last-child td:first-child {
+  border-radius: 0 0 0 var(--crm-r-3);
+}
+
+.crm-container table tr:last-child td:last-child {
+  border-radius: 0 0 var(--crm-r-3) 0;
+}
+
+div:has(> table) {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Room for row action menus, which the overflow rule above would otherwise clip */
+div:has(> table .btn-slide-active),
+div:has(> table .dropdown-toggle[aria-expanded="true"]) {
+  padding-bottom: 20rem;
+}
+
+/* Riverlea _icons.css misses these: its selector reads .sorting_asc.sorting_desc, without a comma */
+.crm-container a:is(.sorting_asc, .sorting_desc)::after {
+  font-family: "Font Awesome 6 Free", "FontAwesome";
+  font-style: normal;
+  text-rendering: auto;
+}
+
+.crm-container th.crm-search-result-select {
+  --crm-btn-margin: 0;
+}
+
+.crm-search-admin-edit-columns details,
+.crm-search .crm-search-admin-relative details {
+  margin-left: 1rem;
+  --crm-page-bg-color: transparent;
+}
+
+.advanced-search-fields {
+  align-items: end;
+}
+
+.crm-container .ui-tabs:not(#mainTabContainer) {
+  background: var(--crm-paper);
+  border: var(--crm-tabs-border) !important;
+  border-radius: var(--crm-r-3);
+}
+
+.crm-container .description:not(#help),
+.crm-container td.description {
+  font-size: 0.875rem;
+}
+
+.crm-icon-picker-button {
+  float: none;
+}
+
+.crm-container .ui-button:not(.ui-button-icon-only).crm-icon-picker-button {
+  display: inline-flex;
+}
+
+.crm-container.ui-dialog .ui-dialog-titlebar .ui-button.crm-dialog-titlebar-print {
+  display: none;
+}
+
+.crm-container .replace-plain {
+  background: var(--crm-paper);
+}
+
+.crm-container .crm-actions-ribbon a.button:not(.delete):hover,
+.crm-container .crm-actions-ribbon a.button:not(.delete):focus {
+  color: var(--crm-primary-hover-text-color);
+}
+
+.crm-container .btn.btn-danger:hover,
+.crm-container .btn.btn-danger:focus,
+.crm-container a.button.delete-button:hover,
+.crm-container a.button.delete-button:focus,
+.crm-container a.button.delete:hover {
+  background-color: var(--crm-danger-color);
+  color: var(--crm-danger-text-color);
+}
+
+.crm-container .ui-tabs ul.ui-tabs-nav .crm-count-0 a em,
+.crm-container #mainTabContainer ul.ui-tabs-nav .crm-count-0 a em {
+  background: transparent;
+  color: var(--crm-c-gray-700);
+}
+
+.crm-contact-page #mainTabContainer .ui-tabs-nav li .ui-tabs-anchor:has(.crm-i) {
+  grid-template-columns: var(--crm-contact-icon-size) 1fr auto;
+  gap: 1ch;
+}
+
+.crm-contact-page #mainTabContainer .ui-tabs-nav li .ui-tabs-anchor .crm-i:first-child {
+  justify-self: center;
+}
+
+div.crm-summary-contactname-block+.crm-actions-ribbon {
+  margin-bottom: var(--crm-l-reg-1) !important;
+}
+
+#contact-summary .crm-edit-help {
+  color: transparent;
+  transition: 0.3s color;
+  opacity: 1;
+  font-size: 0.875rem;
+}
+
+/* !important overrides contactSummary.css, which loads after this file */
+#contact-summary .crm-edit-help .crm-i.fa-pencil {
+  color: var(--crm-primary-ink-color) !important;
+}
+
+#contact-summary .crm-inline-edit:hover .crm-edit-help {
+  color: var(--crm-primary-ink-color);
+}
+
+.crm-container div.crm-summary-row {
+  display: grid;
+  grid-template-columns: var(--crm-input-label-width) 1fr;
+  flex-wrap: wrap;
+}
+
+/* !important overrides contactSummary.css, which loads after this file */
+.crm-container div.crm-summary-row div.crm-label {
+  color: var(--crm-c-gray-700);
+  font-weight: normal !important;
+}
+
+.crm-container div.crm-summary-row div.crm-label+div {
+  font-weight: 500;
+}
+
+#crm-contactname-content .crm-edit-help {
+  color: var(--crm-primary-ink-color) !important;
+  padding: 0.25rem !important;
+  opacity: 1 !important;
+}
+
+#crm-contactname-content > .crm-inline-block-content {
+  border: solid 1px transparent !important;
+}
+
+#crm-contactname-content:hover > .crm-inline-block-content {
+  border-color: var(--crm-primary-color) !important;
+}
+
+.crm-editable.crm-editable-editing {
+  background: var(--crm-paper);
+  padding: 0.5em;
+  border-radius: var(--crm-r-1);
+  border: var(--crm-contact-edit-border);
+}
+
+.crm-tag-item {
+  padding: 0 1ch;
+  border-radius: 1rem;
+}
+
+.contactCardRight:has(#crm-contact-thumbnail) .float-left {
+  width: calc(100% - var(--crm-flex-gap) - var(--crm-contact-image-size));
+}
+
+.select2-drop.select2-drop-active.crm-container .select2-results > li {
+  color: var(--crm-link-color);
+}
+
+html.crm-standalone nav.breadcrumb>ol {
+  display: flex;
+  gap: var(--crm-l-medium);
+}
+
+.breadcrumb ol li:not(:first-child)::before {
+  content: "/";
+  margin-inline-end: var(--crm-l-medium);
+  color: var(--crm-c-gray-500);
+}
+
+ul.crm-quickSearch-results a {
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  color: var(--crm-link-color);
+}
+
+ul.crm-quickSearch-results .ui-state-active a {
+  background: var(--crm-c-gray-100);
+  color: var(--crm-link-hover-color);
+}
+
+.crm_wizard__tille {
+  --crm-panel-bg-color: transparent;
+}
+
+.crmb-wizard-button-right {
+  gap: 1rem;
+}
+
+.standalone-errors {
+  background: var(--crm-danger-light-color);
+}
+
+/* Core gives every plain notice the success variables, including ones that report nothing. */
+.crm-container :is(.help, #help, .status, .messages, .alert):not(.alert-success, .crm-ok) {
+  --crm-alert-success-bg-color: var(--crm-alert-info-bg-color);
+  --crm-alert-success-border-color: var(--crm-alert-info-border-color);
+  --crm-alert-success-text-color: var(--crm-alert-info-text-color);
+}
+
+#crm-status-list :is(.crm-severity-info, .crm-severity-debug) {
+  --crm-success-color: var(--crm-c-gray-100);
+  --crm-success-text-color: var(--crm-text-color);
+}
