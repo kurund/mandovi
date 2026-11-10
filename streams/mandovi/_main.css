@@ -193,10 +193,10 @@
   --crm-contact-tab-count-bg-color: var(--crm-secondary-color);
   --crm-contact-tab-count-color: var(--crm-secondary-text-color);
   --crm-contact-tab-radius: var(--crm-r-2);
-  --crm-contact-panel-padding: var(--crm-l-reg-2);
+  --crm-contact-panel-padding: var(--crm-l-reg);
   --crm-contact-panel-bg-color: var(--crm-container-bg-color);
   --crm-contact-edit-border: 1px solid var(--crm-primary-color);
-  --crm-contact-block-padding: var(--crm-l-medium-2);
+  --crm-contact-block-padding: var(--crm-l-small) var(--crm-l-medium);
   --crm-contact-block-bg-color: var(--crm-container-bg-color);
   --crm-contact-label-bg-color: var(--crm-container-bg-color);
   --crm-contact-header-bg-color: unset;
@@ -415,6 +415,17 @@ div.crm-summary-contactname-block+.crm-actions-ribbon {
 /* !important overrides contactSummary.css, which loads after this file */
 #contact-summary .crm-edit-help .crm-i.fa-pencil {
   color: var(--crm-primary-ink-color) !important;
+  transition: 0.15s opacity;
+}
+
+@media (hover: hover) {
+  #contact-summary .crm-inline-edit:not(.add-new) .crm-edit-help .crm-i.fa-pencil {
+    opacity: 0;
+  }
+
+  #contact-summary .crm-inline-edit:is(:hover, :focus-within) .crm-edit-help .crm-i.fa-pencil {
+    opacity: 1;
+  }
 }
 
 #contact-summary .crm-inline-edit:hover .crm-edit-help {
@@ -425,6 +436,25 @@ div.crm-summary-contactname-block+.crm-actions-ribbon {
   display: grid;
   grid-template-columns: var(--crm-input-label-width) 1fr;
   flex-wrap: wrap;
+}
+
+.crm-contact-page .crm-inline-block-content div.crm-summary-row {
+  grid-template-columns: minmax(7rem, min(35%, 13rem)) minmax(0, 1fr);
+  align-items: baseline;
+}
+
+.crm-contact-page .crm-inline-block-content div.crm-summary-row div.crm-content {
+  overflow-wrap: anywhere;
+}
+
+.crm-contact-page .crm-inline-block-content div.crm-summary-row div.crm-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.crm-contact-page div.crm-summary-row.mandovi-empty :is(div.crm-label, div.crm-content) {
+  padding-block: var(--crm-l-xsmall);
 }
 
 /* !important overrides contactSummary.css, which loads after this file */
@@ -458,9 +488,97 @@ div.crm-summary-contactname-block+.crm-actions-ribbon {
   border: var(--crm-contact-edit-border);
 }
 
-.crm-tag-item {
-  padding: 0 1ch;
+.crm-container .crm-tag-item {
+  display: inline-block;
+  padding: 0.0625rem 0.5rem;
   border-radius: 1rem;
+  background-color: var(--crm-secondary-color);
+  color: var(--crm-secondary-text-color);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.crm-contact-page #tags {
+  gap: var(--crm-l-small);
+}
+
+div.crm-summary-contactname-block {
+  padding: var(--crm-l-reg) var(--crm-l-reg-2) var(--crm-l-small);
+  border: var(--crm-border);
+  border-bottom: 0;
+  border-radius: var(--crm-r-3) var(--crm-r-3) 0 0;
+  background: linear-gradient(color-mix(in srgb, var(--crm-primary-color) 6%, var(--crm-paper)), var(--crm-paper));
+}
+
+#crm-main-content-wrapper div.crm-summary-contactname-block + .crm-actions-ribbon {
+  padding: var(--crm-l-small) var(--crm-l-reg-2) var(--crm-l-reg);
+  border: var(--crm-border);
+  border-top: 0;
+  border-radius: 0 0 var(--crm-r-3) var(--crm-r-3);
+  background: var(--crm-paper);
+}
+
+#crm-main-content-wrapper #crm-contactname-content .crm-summary-display_name {
+  display: flex;
+  align-items: center;
+  gap: var(--crm-l-medium-2);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+#crm-main-content-wrapper .crm-summary-display_name .crm-summary-link .crm-i {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--crm-c-teal-100);
+  color: var(--crm-primary-ink-color);
+  font-size: 1.25rem;
+}
+
+#contact-summary .crm-summary-block {
+  border: var(--crm-border);
+  box-shadow: none;
+  transition: 0.15s border-color;
+}
+
+#contact-summary .crm-summary-block .crm-summary-block,
+#contact-summary details .crm-summary-block {
+  border: 0;
+}
+
+#contact-summary .crm-summary-block:is(:hover, :focus-within) {
+  border-color: color-mix(in srgb, var(--crm-primary-color) 40%, var(--crm-border-color));
+}
+
+#contact-summary .crm-summary-block:has(.crm-summary-row.mandovi-empty):not(:has(.crm-summary-row:not(.mandovi-empty))),
+#contact-summary .crm-summary-block:has(.address.add-new) {
+  border-style: dashed;
+  background: transparent;
+}
+
+.crm-contact-page #mainTabContainer .ui-tabs-nav li[class*="crm-count-"]:not(.crm-count-0, .ui-tabs-active) .ui-tabs-anchor {
+  color: var(--crm-text-color);
+}
+
+.crm-contact-page #mainTabContainer .ui-tabs-nav li.crm-count-0:not(.ui-tabs-active) .ui-tabs-anchor .crm-i {
+  opacity: 0.6;
+}
+
+.crm-container #crm-record-log {
+  padding: var(--crm-l-medium-2) var(--crm-l-small) 0;
+  color: var(--crm-c-gray-700);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.crm-container #crm-record-log .col1 {
+  float: left;
 }
 
 .contactCardRight:has(#crm-contact-thumbnail) .float-left {
@@ -515,4 +633,12 @@ ul.crm-quickSearch-results .ui-state-active a {
 #crm-status-list :is(.crm-severity-info, .crm-severity-debug) {
   --crm-success-color: var(--crm-c-gray-100);
   --crm-success-text-color: var(--crm-text-color);
+}
+
+html #crm-main-content-wrapper:has(.crm-contact-page) {
+  box-shadow: none;
+}
+
+#contact-summary .address.add-new .crm-edit-help {
+  background: transparent;
 }
