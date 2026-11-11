@@ -118,12 +118,13 @@
 
   --crm-accordion-radius: var(--crm-r-3);
   --crm-accordion-border: var(--crm-border);
-  --crm-accordion-border-width: 1px;
-  --crm-accordion-header-bg-color: var(--crm-paper);
-  --crm-accordion-header-bg-active-color: var(--crm-paper);
+  --crm-accordion-border-width: 0;
+  --crm-accordion-gap: var(--crm-l-small) 0 0;
+  --crm-accordion-header-bg-color: var(--crm-c-gray-050);
+  --crm-accordion-header-bg-active-color: var(--crm-c-gray-100);
   --crm-accordion-header-color: var(--crm-text-color);
   --crm-accordion-header-border: var(--crm-border);
-  --crm-accordion-header-border-width: 0 0 1px 0;
+  --crm-accordion-header-border-width: 0;
   --crm-accordion-header-weight: 600;
   --crm-accordion-icon-color: var(--crm-c-gray-700);
   --crm-accordion-body-bg-color: var(--crm-paper);
@@ -651,4 +652,18 @@ html .crm-container.ui-dialog .ui-dialog-buttonset button:has(.fa-times) {
 html .crm-container.ui-dialog .ui-dialog-buttonset button:has(.fa-times):is(:hover, :focus) {
   background: var(--crm-secondary-hover-color);
   color: var(--crm-secondary-hover-text-color);
+}
+
+.crm-container details.crm-accordion-bold {
+  border: var(--crm-border);
+  border-radius: var(--crm-accordion-radius);
+}
+
+.crm-container details.crm-accordion-bold > summary {
+  border-radius: calc(var(--crm-accordion-radius) - 1px);
+}
+
+.crm-container details.crm-accordion-bold[open] > summary {
+  border-bottom: var(--crm-border);
+  border-radius: calc(var(--crm-accordion-radius) - 1px) calc(var(--crm-accordion-radius) - 1px) 0 0;
 }
